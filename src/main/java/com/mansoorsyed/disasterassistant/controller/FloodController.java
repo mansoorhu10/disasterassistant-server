@@ -6,6 +6,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -18,5 +20,10 @@ public class FloodController {
     @GetMapping("/flood/get-all")
     public List<Flood> getAllFloods() {
         return floodDao.getAllFloods();
+    }
+
+    @PostMapping("/flood/get-all")
+    public Flood save(@RequestBody Flood flood) {
+        return floodDao.save(flood);
     }
 }

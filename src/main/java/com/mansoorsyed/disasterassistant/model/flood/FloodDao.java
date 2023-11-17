@@ -11,8 +11,8 @@ public class FloodDao {
     @Autowired
     private FloodRepository repository;
 
-    public void save(Flood flood){
-        repository.save(flood);
+    public Flood save(Flood flood){
+        return repository.save(flood);
     }
 
     public List<Flood> getAllFloods() {
