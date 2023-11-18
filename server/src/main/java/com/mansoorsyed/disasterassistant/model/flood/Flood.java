@@ -14,6 +14,10 @@ public class Flood {
     private String location;
     private int magnitude; 
 
+    public int getId(){
+        return id;
+    }
+
     public void setId(int id){
         this.id = id;
     }
@@ -41,6 +45,5 @@ public class Flood {
     public void setMagnitude(int magnitude){
         this.magnitude = magnitude;
     }
-
     
 }

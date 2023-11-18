@@ -3,7 +3,6 @@ package com.mansoorsyed.disasterassistant.controller;
 import com.mansoorsyed.disasterassistant.model.flood.Flood;
 import com.mansoorsyed.disasterassistant.model.flood.FloodDao;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +21,7 @@ public class FloodController {
         return floodDao.getAllFloods();
     }
 
-    @PostMapping("/flood/get-all")
+    @PostMapping("/flood/save")
     public Flood save(@RequestBody Flood flood) {
         return floodDao.save(flood);
     }

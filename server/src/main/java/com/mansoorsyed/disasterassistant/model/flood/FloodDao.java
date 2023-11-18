@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class FloodDao {
+    
     @Autowired
     private FloodRepository repository;
 
@@ -17,14 +18,12 @@ public class FloodDao {
 
     public List<Flood> getAllFloods() {
         List<Flood> floods = new ArrayList<>();
-
         Streamable.of(repository.findAll())
             .forEach(floods::add);
-
         return floods;
     }
 
-    public void delete(Flood flood){
-        repository.delete(flood);
+    public void delete(int floodId){
+        repository.deleteById(floodId);
     }
 }

@@ -21,9 +21,9 @@ class DisasterassistantApplicationTests {
 	@Test
 	void addFloodTest() {
 		Flood flood = new Flood();
-		flood.setName("Saint John River");
-		flood.setLocation("Quebec");
-		flood.setMagnitude(4);
+		flood.setName("Red River");
+		flood.setLocation("Manitoba");
+		flood.setMagnitude(6);
 		floodDao.save(flood);
 	}
 	
@@ -31,7 +31,7 @@ class DisasterassistantApplicationTests {
 	void getAllFloodsAndDeleteThem() {
 		List<Flood> floods = floodDao.getAllFloods();
 		for (Flood flood : floods){
-			floodDao.delete(flood);
+			floodDao.delete(flood.getId());
 		}
 	}
 
