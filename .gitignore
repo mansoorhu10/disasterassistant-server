@@ -36,3 +36,6 @@ out/
 ### VS Code ###
 .vscode/
 .env
+
+### custom env ###
+app/src/main/assets/env
