@@ -38,4 +38,4 @@ out/
 .env
 
 ### custom env ###
-/app/src/main/assets/env
+app/src/main/assets/env
