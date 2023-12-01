@@ -1,10 +1,11 @@
 package com.mansoorsyed.disasterassistant.model.user;
-;
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.mysql.cj.x.protobuf.MysqlxCrud.Collection;
+// import com.mysql.cj.x.protobuf.MysqlxCrud.Collection;
+import java.util.Collection;
 
 import java.util.List;
 import jakarta.annotation.Generated;
@@ -19,7 +20,6 @@ import lombok.Data;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import java.util.Collection;
 
 
 @Data
