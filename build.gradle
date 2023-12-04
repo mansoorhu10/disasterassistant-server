@@ -43,6 +43,8 @@ dependencies {
 	// https://mvnrepository.com/artifact/org.springframework.security/spring-security-config
 	implementation group: 'org.springframework.security', name: 'spring-security-config', version: '6.2.0'
 
+	annotationProcessor 'org.projectlombok:lombok:1.18.30'
+
 }
 
 tasks.named('bootBuildImage') {
