@@ -34,7 +34,7 @@ class DisasterassistantApplicationTests {
 	@Test
 	void getUserTest() {
 		UserDetails userDetails = this.userDetailsService.loadUserByUsername("mario@gmail.com");
-		System.out.println(userDetails);
+		System.out.println("Got user details");
 	}
 
 }
