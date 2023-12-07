@@ -20,8 +20,14 @@ public class AuthenticationService {
 
     @Autowired
     private final UserRepository repository;
+
+    @Autowired
     private final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    
+    @Autowired
     private final JwtService jwtService;
+    
+    @Autowired
     private final AuthenticationManager authenticationManager;
 
     public AuthenticationResponse register(RegisterRequest request) {
