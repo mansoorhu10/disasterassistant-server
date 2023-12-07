@@ -5,10 +5,8 @@ import com.mansoorsyed.disasterassistant.model.user.Role;
 import com.mansoorsyed.disasterassistant.model.user.User;
 import com.mansoorsyed.disasterassistant.model.user.UserRepository;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -18,16 +16,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class AuthenticationService {
 
-    @Autowired
     private final UserRepository repository;
-
-    @Autowired
-    private final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-    
-    @Autowired
+    private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
-    
-    @Autowired
     private final AuthenticationManager authenticationManager;
 
     public AuthenticationResponse register(RegisterRequest request) {
