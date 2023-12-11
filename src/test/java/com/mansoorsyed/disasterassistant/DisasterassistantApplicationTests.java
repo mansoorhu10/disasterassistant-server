@@ -5,19 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-
-import com.mansoorsyed.disasterassistant.controller.auth.AuthenticationRequest;
 import com.mansoorsyed.disasterassistant.model.flood.Flood;
 import com.mansoorsyed.disasterassistant.model.flood.FloodDao;
 import com.mansoorsyed.disasterassistant.model.user.User;
 import com.mansoorsyed.disasterassistant.model.user.UserRepository;
-
-import io.jsonwebtoken.io.Decoders;
-import net.minidev.json.JSONArray;
-import net.minidev.json.JSONObject;
-import net.minidev.json.parser.JSONParser;
 
 @SpringBootTest
 class DisasterassistantApplicationTests {
