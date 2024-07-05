@@ -11,7 +11,8 @@ public class Flood {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String location;
+    private double longitude;
+    private double latitude;
     private int magnitude; 
 
     public int getId(){
@@ -30,12 +31,20 @@ public class Flood {
         this.name = name;
     }
 
-    public String getLocation(){
-        return location;
+    public double getLatitude(){
+        return latitude;
     }
 
-    public void setLocation(String location){
-        this.location = location;
+    public double getLongitude(){
+        return longitude;
+    }
+
+    public void setLongitude(double longitude){
+        this.longitude = longitude;
+    }
+
+    public void setLatitude(double latitude){
+        this.latitude = latitude;
     }
 
     public int getMagnitude(){

@@ -25,7 +25,8 @@ class DisasterassistantApplicationTests {
 	void addFloodTest() {
 		Flood flood = new Flood();
 		flood.setName("Red River");
-		flood.setLocation("Manitoba");
+		flood.setLatitude(900.3);
+		flood.setLongitude(1034.45);
 		flood.setMagnitude(6);
 		floodDao.save(flood);
 	}
@@ -47,5 +48,4 @@ class DisasterassistantApplicationTests {
             )
         );
 	}
-
 }
